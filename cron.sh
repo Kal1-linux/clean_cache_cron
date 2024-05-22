@@ -4,7 +4,7 @@
 loc=$(pwd)
 
 # Define the cron job command
-cron_job="* * * * * bash $loc/clean_cache_logs.sh"
+cron_job="* * * * * /bin/bash $loc/clean_cache_logs.sh"
 
 # Check if the cron job command already exists in the crontab
 if ! sudo crontab -u root -l | grep -qFx "$cron_job"; then
